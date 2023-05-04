@@ -1,0 +1,113 @@
+/*fonts
+font-family: 'Permanent Marker', cursive;
+font-family: 'Sedgwick Ave Display', cursive;
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*header*/
+header{
+    border-bottom: 1px solid white;
+}
+
+nav ul{
+    text-align: end;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    color: antiquewhite;
+    border-right: 1px solid gray;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#unsic{
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+/*h*/
+h1, h2{
+    color: rgb(0, 192, 254);
+}
+
+h2{
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 900;
+}
+
+h3, h4, h5, h6{
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+/*main*/
+body{
+    background-color: rgba(1, 1, 1);
+}
+
+main{
+    background-color: rgba(7, 6, 6);
+}
+
+#unsicSlogan{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5rem;
+    color: rgb(0, 192, 254);
+}
+
+span{
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+form label{
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*footer*/
+footer{
+    border-top: 1px solid white;
+}
+footer h3{
+    font-size: 15px;
+    color: gray;
+}
+
+i{
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+/*bootstrap*/
+.navbar{
+    background-color: rgb(1, 1, 1);
+}
+
+.navbar-brand{
+    color: rgb(0, 192, 254);
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 30px;
+}
+
+.nav-link{
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.minwidth{
+    min-width: 530px
+}
