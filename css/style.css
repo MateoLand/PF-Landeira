@@ -61,7 +61,7 @@ main{
 
 #unsicSlogan{
     font-family: 'Permanent Marker', cursive;
-    font-size: 5rem;
+    font-size: calc(4vw + 3rem);
     color: rgb(0, 192, 254);
 }
 
@@ -111,3 +111,7 @@ i{
 .minwidth{
     min-width: 530px
 }
+
+/* .noMargin{
+    margin-bottom: 0;
+} */
