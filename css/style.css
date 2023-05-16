@@ -103,15 +103,19 @@ i{
     font-size: 30px;
 }
 
+.navbar-brand:hover{
+    color: rgb(0, 192, 254);
+}
+
 .nav-link{
     color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.nav-link:hover{
+    color: rgb(0, 192, 254);
+}
+
 .minwidth{
     min-width: 530px
 }
-
-/* .noMargin{
-    margin-bottom: 0;
-} */
