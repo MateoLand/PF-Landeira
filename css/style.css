@@ -73,6 +73,15 @@ li{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+}
+
+li h4:hover{
+    color: rgb(0, 192, 254);
+    cursor: pointer;
+}
+
 form label{
     color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
@@ -90,6 +99,10 @@ footer h3{
 i{
     color: whitesmoke;
     font-size: 30px;
+}
+
+i:hover{
+    color: rgb(0, 192, 254);
 }
 
 /*bootstrap*/
@@ -118,4 +131,8 @@ i{
 
 .minwidth{
     min-width: 530px
+}
+
+ul a:hover h4{
+    color: rgb(0, 192, 254);
 }
