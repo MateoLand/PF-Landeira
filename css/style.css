@@ -136,3 +136,43 @@ i:hover{
 ul a:hover h4{
     color: rgb(0, 192, 254);
 }
+
+/* login */
+.container {
+    margin-top: 100px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: rgba(7, 6, 6);
+    border-bottom: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: rgba(7, 6, 6);
+    padding: 40px;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 12px 20px;
+}
+
+.btn-primary {
+    background-color:rgba(7, 6, 6);
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 192, 254);
+}
+
