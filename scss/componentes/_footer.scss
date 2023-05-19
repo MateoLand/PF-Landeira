@@ -1,0 +1,17 @@
+footer {
+    border-top: 1px solid white;
+
+    h3 {
+        font-size: 15px;
+        color: gray;
+    }
+
+    i {
+        color: whitesmoke;
+        font-size: 30px;
+
+        &:hover {
+            color: rgb(0, 192, 254);
+        }
+    }
+}

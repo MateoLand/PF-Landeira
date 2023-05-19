@@ -1,0 +1,24 @@
+header {
+    border-bottom: 1px solid white;
+
+    nav {
+        ul {
+            text-align: end;
+
+            li {
+                display: inline;
+
+                a {
+                    color: antiquewhite;
+                    border-right: 1px solid gray;
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+    
+    #unsic {
+        font-family: $font-secondary;
+    }
+}

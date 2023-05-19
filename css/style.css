@@ -1,178 +1,152 @@
-/*fonts
-font-family: 'Permanent Marker', cursive;
-font-family: 'Sedgwick Ave Display', cursive;
-*/
-
-*{
-    padding: 0;
-    margin: 0;
+.navbar {
+  background-color: rgb(1, 1, 1);
+}
+.navbar .navbar-brand {
+  color: rgb(0, 192, 254);
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 30px;
+}
+.navbar .navbar-brand:hover {
+  color: rgb(0, 192, 254);
+}
+.navbar .nav-link {
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar .nav-link:hover {
+  color: rgb(0, 192, 254);
+}
+.navbar .minwidth {
+  min-width: 530px;
+}
+.navbar ul a:hover h4 {
+  color: rgb(0, 192, 254);
 }
 
-/*header*/
-header{
-    border-bottom: 1px solid white;
+footer {
+  border-top: 1px solid white;
+}
+footer h3 {
+  font-size: 15px;
+  color: gray;
+}
+footer i {
+  color: whitesmoke;
+  font-size: 30px;
+}
+footer i:hover {
+  color: rgb(0, 192, 254);
 }
 
-nav ul{
-    text-align: end;
+header {
+  border-bottom: 1px solid white;
+}
+header nav ul {
+  text-align: end;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  color: antiquewhite;
+  border-right: 1px solid gray;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header #unsic {
+  font-family: "Sedgwick Ave Display", cursive;
 }
 
-nav ul li{
-    display: inline;
+h1, h2 {
+  color: rgb(0, 192, 254);
 }
 
-nav ul li a{
-    color: antiquewhite;
-    border-right: 1px solid gray;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 900;
 }
 
-#unsic{
-    font-family: 'Sedgwick Ave Display', cursive;
+h3, h4, h5, h6 {
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
 }
 
-/*h*/
-h1, h2{
-    color: rgb(0, 192, 254);
-}
-
-h2{
-    text-align: center;
-    font-size: 32px;
-    font-family: 'Permanent Marker', cursive;
-    font-weight: 900;
-}
-
-h3, h4, h5, h6{
-    color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 0;
-}
-
-/*main*/
-body{
-    background-color: rgba(1, 1, 1);
-}
-
-main{
-    background-color: rgba(7, 6, 6);
-}
-
-#unsicSlogan{
-    font-family: 'Permanent Marker', cursive;
-    font-size: calc(4vw + 3rem);
-    color: rgb(0, 192, 254);
-}
-
-span{
-    display: block;
-}
-
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-li h4:hover{
-    color: rgb(0, 192, 254);
-    cursor: pointer;
-}
-
-form label{
-    color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/*footer*/
-footer{
-    border-top: 1px solid white;
-}
-footer h3{
-    font-size: 15px;
-    color: gray;
-}
-
-i{
-    color: whitesmoke;
-    font-size: 30px;
-}
-
-i:hover{
-    color: rgb(0, 192, 254);
-}
-
-/*bootstrap*/
-.navbar{
-    background-color: rgb(1, 1, 1);
-}
-
-.navbar-brand{
-    color: rgb(0, 192, 254);
-    font-family: 'Sedgwick Ave Display', cursive;
-    font-size: 30px;
-}
-
-.navbar-brand:hover{
-    color: rgb(0, 192, 254);
-}
-
-.nav-link{
-    color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.nav-link:hover{
-    color: rgb(0, 192, 254);
-}
-
-.minwidth{
-    min-width: 530px
-}
-
-ul a:hover h4{
-    color: rgb(0, 192, 254);
-}
-
-/* login */
 .container {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .card-header {
-    background-color: rgba(7, 6, 6);
-    border-bottom: none;
-    text-align: center;
-    font-weight: bold;
+  background-color: rgb(7, 6, 6);
+  border-bottom: none;
+  text-align: center;
+  font-weight: bold;
 }
-
 .card-body {
-    background-color: rgba(7, 6, 6);
-    padding: 40px;
+  background-color: rgb(7, 6, 6);
+  padding: 40px;
 }
 
 .form-control {
-    border-radius: 20px;
-    padding: 12px 20px;
+  border-radius: 20px;
+  padding: 12px 20px;
 }
 
 .btn-primary {
-    background-color:rgba(7, 6, 6);
-    border-radius: 20px;
-    padding: 10px 25px;
-    font-weight: bold;
+  background-color: rgb(7, 6, 6);
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: bold;
 }
-
 .btn-primary:hover {
-    background-color: rgb(0, 192, 254);
+  background-color: rgb(0, 192, 254);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(1, 1, 1);
+}
+
+li {
+  list-style: none;
+}
+
+ul a:hover h4 {
+  color: rgb(0, 192, 254);
+}
+
+main {
+  background-color: rgb(7, 6, 6);
+}
+main #unsicSlogan {
+  font-family: "Permanent Marker", cursive;
+  font-size: calc(4vw + 3rem);
+  color: rgb(0, 192, 254);
+}
+main span {
+  display: block;
+}
+main a {
+  text-decoration: none;
+}
+main li h4:hover {
+  color: rgb(0, 192, 254);
+  cursor: pointer;
+}
+main form label {
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
