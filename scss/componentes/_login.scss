@@ -3,20 +3,24 @@
 }
 
 .card {
-    border: none;
+    border-color:rgb(0, 192, 254);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     &-header {
-        background-color: rgba(7, 6, 6);
+        background-color: rgba(1, 1, 1);
         border-bottom: none;
         text-align: center;
         font-weight: bold;
     }
 
     &-body {
-        background-color: rgba(7, 6, 6);
+        background-color: rgba(1, 1, 1);
         padding: 40px;
+    }
+
+    a{
+        color: rgb(0, 192, 254) !important;
     }
 }
 
