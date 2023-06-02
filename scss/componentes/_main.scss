@@ -11,9 +11,6 @@ li {
     list-style: none;
 }
 
-ul a:hover h4{
-    color: rgb(0, 192, 254);
-}
 
 main {
     background: rgba(1, 1, 1, 1.0);
@@ -32,11 +29,19 @@ main {
         display: block;
     }
 
+    p {
+        font-size: 23px;
+    }
+    
     a {
         text-decoration: none;
     }
 
-    li h4:hover {
+    ul a:hover p{
+        color: rgb(0, 192, 254);
+    }
+
+    li p:hover {
         color: rgb(0, 192, 254);
         cursor: pointer;
     }
