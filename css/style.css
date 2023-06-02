@@ -43,6 +43,9 @@ header {
   background-color: rgb(7, 6, 6);
   border-bottom: 1px solid white;
 }
+header svg {
+  color: rgb(0, 192, 254);
+}
 header nav ul {
   text-align: end;
 }
@@ -95,8 +98,9 @@ h3, h4, h5, h6 {
   background-color: rgb(1, 1, 1);
   padding: 40px;
 }
-.card a {
-  color: rgb(0, 192, 254) !important;
+.card-body .rightcolor {
+  color: rgb(0, 192, 254);
+  font-weight: bold;
 }
 
 .form-control {
