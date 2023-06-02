@@ -27,7 +27,7 @@ footer {
   background-color: rgb(7, 6, 6);
   border-top: 1px solid white;
 }
-footer h3 {
+footer p {
   font-size: 15px;
   color: gray;
 }
@@ -73,7 +73,7 @@ h2 {
   font-weight: 900;
 }
 
-h3, h4, h5, h6 {
+p, h4, h5, h6 {
   color: antiquewhite;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0;
