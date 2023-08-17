@@ -1,10 +1,10 @@
-/********************ARRAYS********************/
+/******************** ARRAYS ********************/
 
 const arraySongs = [];
 const arrayArtists = [];
 const arrayGenres = [];
 
-/********************ARRAYS********************/
+/******************** ARRAYS ********************/
 
 
 
@@ -15,7 +15,7 @@ const arrayGenres = [];
 
 
 
-/********************CONSTRUCTORS********************/
+/******************** CONSTRUCTORS ********************/
 
 class Song{
   constructor(name, genre, streams, position, url, date){
@@ -72,7 +72,7 @@ class Genre{
   }
 }
 
-/********************CONSTRUCTORS********************/
+/******************** CONSTRUCTORS ********************/
 
 
 
@@ -83,9 +83,9 @@ class Genre{
 
 
 
-/********************OBJECTS********************/
+/******************** OBJECTS ********************/
 
-/*****Songs*****/
+/***** Songs *****/
 
 const raiseTheBar = new Song("Raise the Bar", "Pop", 1000, 1, "https://www.youtube.com/embed/XqvEdUfmXXU", 2016);
 const howToLove = new Song("How to Love", "Pop", 980, 2, "https://www.youtube.com/embed/PQocCi6j_mk", 2011);
@@ -93,34 +93,32 @@ const pinkChampagne = new Song("Pink Champagne", "Pop", 300, 5, "https://www.you
 const goOutTonight = new Song("Go Out Tonight", "Rap", 450, 4, "https://www.youtube.com/embed/nRdUGMm68zY", 2015);
 const permanentMarker = new Song("Permanent Marker", "Pop", 700, 3, "https://www.youtube.com/embed/kFdhPWKAu58", 2009);
 
-/*****Songs*****/
+/***** Songs *****/
 
 
 
 
 
-/*****Artists*****/
+/***** Artists *****/
 
 const arianaGrande = new Artist("Ariana Grande", "Pop", 500, 4);
 const drake = new Artist("Drake", "Rap", 18000, 2);
 const justinBieber = new Artist("Justin Bieber", "Pop", 20000, 1);
 const taylorSwift = new Artist("Taylor Swift", "Pop", 19000, 3);
 
-/*****Artists*****/
+/***** Artists *****/
 
 
 
 
 
-/*****Genres*****/
+/***** Genres *****/
 
 //proximamente
 
-/*****Genres*****/
+/***** Genres *****/
 
-/********************OBJECTS********************/
-
-
+/******************** OBJECTS ********************/
 
 
 
@@ -129,15 +127,35 @@ const taylorSwift = new Artist("Taylor Swift", "Pop", 19000, 3);
 
 
 
-/********************ASSIGNATIONS********************/
 
+
+/******************** ASSIGNATIONS ********************/
+
+/***** Songs *****/
+
+pinkChampagne.addArtist(arianaGrande);
+goOutTonight.addArtist(drake);
 howToLove.addArtist(justinBieber);
 raiseTheBar.addArtist(justinBieber);
+permanentMarker.addArtist(taylorSwift);
+
+/***** Songs *****/
+
+
+
+
+
+/***** Artist *****/
+
+arianaGrande.addSongs(pinkChampagne);
+drake.addSongs(goOutTonight);
 justinBieber.addSongs(howToLove);
 justinBieber.addSongs(raiseTheBar);
-goOutTonight.addArtist(drake);
-drake.addSongs(goOutTonight)
+taylorSwift.addSongs(permanentMarker);
 
+/***** Artist *****/
+
+//codigo a corregir
 // const artistsToSongs = {   //assignates artists to songs
 //   arianaGrande: [pinkChampagne], 
 //   drake: [goOutTonight], 
@@ -212,7 +230,7 @@ function findArtist() {
     artista.songs.forEach(song => songNames.push(song.name));
     alert(`
     Artist: ${artista.name}
-    Songs: ${songNames}
+    Songs: ${songNames.join(`, `)}
     Streams: ${artista.streams}
     Position: ${artista.position}
     `);
@@ -240,4 +258,6 @@ function request() {
 /********************FUNCTIONS********************/
 
 
-findArtist()
+checkAge();
+findArtist();
+request();
