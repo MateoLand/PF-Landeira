@@ -258,6 +258,61 @@ function request() {
 /********************FUNCTIONS********************/
 
 
+
+
+
+
+
+
+
+
+/******************** HEADER&FOOTER ********************/
+const footer = document.querySelector('footer')
+// footer.innerHTML = `
+// <div class="row pt-4">
+//   <p class="col-lg-6">
+//     © Unsic 2023. All rights reserved. The content of this website,
+//     including but not limited to text, images, logos, and music, is
+//     protected by copyright and other intellectual property laws.
+//     Reproduction, distribution, modification, or any other form of use
+//     without the prior written permission of the website owners is strictly
+//     prohibited. All music material featured on this website is the
+//     property of the respective artists and is used with their consent. Any
+//     unauthorized use of this content may be subject to legal action.
+//   </p>
+// <div class="col-lg-6">
+//   <p class="d-flex justify-content-center">Contact us:</p>
+//   <ul class="d-flex justify-content-evenly">
+//     <!--Los href no redireccionan a ningun lugar en especifico-->
+//     <li>
+//       <a href="lnk" target="_blank"
+//         ><i class="fa-brands fa-linkedin"></i
+//       ></a>
+//     </li>
+//     <li>
+//       <a href="ig" target="_blank"
+//         ><i class="fa-brands fa-instagram"></i
+//       ></a>
+//     </li>
+//     <li>
+//       <a href="mail" target="_blank"
+//         ><i class="fa-regular fa-envelope"></i
+//       ></a>
+//     </li>
+//     <li>
+//       <a href="wpp" target="_blank"
+//         ><i class="fa-brands fa-whatsapp"></i
+//       ></a>
+//     </li>
+//   </ul>
+// </div>
+// </div>
+// `
+
+
+
+
+
 checkAge();
 findArtist();
 request();
