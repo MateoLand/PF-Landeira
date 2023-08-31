@@ -180,21 +180,18 @@ main form label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid red;
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  border-radius: 11px;
   position: relative;
+  width: 50%;
 }
-.genre:active .description {
+.genre:hover .description {
   opacity: 1;
-  border-radius: 11px;
 }
 .genre img {
-  width: 85px;
-  height: 85px;
+  width: 90%;
+  height: 100%;
   border-radius: 11px;
 }
 .genre .description {
@@ -203,16 +200,15 @@ main form label {
   align-items: center;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 90%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.655);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   text-align: center;
-  border-radius: 11px;
   cursor: default;
   user-select: none;
+  border-radius: 11px;
 }
 .genre .description h2 {
   color: black;
