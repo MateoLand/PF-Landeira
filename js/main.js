@@ -6,111 +6,231 @@ const arrayGenres = [];
 
 /******************** ARRAYS ********************/
 
-
-
-
-
-
-
-
-
-
 /******************** CONSTRUCTORS ********************/
 
-class Song{
-  constructor(name, genre, streams, position, url, date){
-      this.name = name;
-      this.artists = [];
-      this.genre = genre;
-      this.streams = streams;
-      this.position = position;
-      this.url = url;
-      this.date = date;
-      arraySongs.push(this);
+class Song {
+  constructor(id, name, genre, streams, position, url, date) {
+    this.id = id;
+    this.name = name;
+    this.artists = [];
+    this.genre = genre;
+    this.streams = streams;
+    this.position = position;
+    this.url = url;
+    this.date = date;
+    arraySongs.push(this);
   }
 
-  addArtist(artist){
+  addArtist(artist) {
     this.artists.push(artist);
+    artist.addSong(this);
   }
 }
 
-
-
-
-
-class Artist{
-  constructor(name, genre, streams, position) {
+class Artist {
+  constructor(id, name, genre, streams, position, icon) {
+    this.id = id;
     this.name = name;
     this.songs = [];
     this.genre = genre;
     this.streams = streams;
     this.position = position;
+    this.icon = icon;
     arrayArtists.push(this);
   }
 
-  addSongs(song){
+  addSong(song) {
     this.songs.push(song);
-  }
-
-  addStreams() {
-    this.streams++;
   }
 }
 
-
-
-
-
-class Genre{
-  constructor(name, song, artist, streams, position){
-      this.name = name;
-      this.song = song;
-      this.artist = artist;
-      this.streams = streams;
-      this.position = position;
-      arrayGenres.push(this);
+class Genre {
+  constructor(name, song, artist, streams, position) {
+    this.name = name;
+    this.song = song;
+    this.artist = artist;
+    this.streams = streams;
+    this.position = position;
+    arrayGenres.push(this);
   }
 }
 
 /******************** CONSTRUCTORS ********************/
 
-
-
-
-
-
-
-
-
-
 /******************** OBJECTS ********************/
 
 /***** Songs *****/
 
-const raiseTheBar = new Song("Raise the Bar", "Pop", 1000, 1, "https://www.youtube.com/embed/XqvEdUfmXXU", 2016);
-const howToLove = new Song("How to Love", "Pop", 980, 2, "https://www.youtube.com/embed/PQocCi6j_mk", 2011);
-const pinkChampagne = new Song("Pink Champagne", "Pop", 300, 5, "https://www.youtube.com/embed/kbp3Rlscn50", 2013);
-const goOutTonight = new Song("Go Out Tonight", "Rap", 450, 4, "https://www.youtube.com/embed/nRdUGMm68zY", 2015);
-const permanentMarker = new Song("Permanent Marker", "Pop", 700, 3, "https://www.youtube.com/embed/kFdhPWKAu58", 2009);
+const raiseTheBar = new Song(
+  1,
+  "Raise the Bar",
+  "Pop",
+  1000,
+  1,
+  "https://www.youtube.com/embed/XqvEdUfmXXU",
+  2016
+);
+const howToLove = new Song(
+  2,
+  "How to Love",
+  "Pop",
+  980,
+  2,
+  "https://www.youtube.com/embed/PQocCi6j_mk",
+  2011
+);
+const pinkChampagne = new Song(
+  3,
+  "Pink Champagne",
+  "Pop",
+  300,
+  5,
+  "https://www.youtube.com/embed/kbp3Rlscn50",
+  2013
+);
+const goOutTonight = new Song(
+  4,
+  "Go Out Tonight",
+  "Rap",
+  450,
+  4,
+  "https://www.youtube.com/embed/nRdUGMm68zY",
+  2015
+);
+const permanentMarker = new Song(
+  5,
+  "Permanent Marker",
+  "Pop",
+  700,
+  3,
+  "https://www.youtube.com/embed/iBLJR3VDbnY",
+  2009
+);
+const mamiNoSe = new Song(
+  6,
+  "Mami No Se",
+  "Reggaeton",
+  900,
+  6,
+  "https://www.youtube.com/embed/5-rr3sEfySM",
+  2018
+);
+const badCover = new Song(
+  7,
+  "Bad (cover)",
+  "Pop",
+  300,
+  8,
+  "https://www.youtube.com/embed/dL9TK-OnH-g",
+  2018
+);
+const everythingYouAre = new Song(
+  8,
+  "Everything You Are",
+  "Pop",
+  800,
+  10,
+  "https://www.youtube.com/embed/o_ez1-zIUR8",
+  2014
+);
+const easier = new Song(
+  9,
+  "Easier",
+  "Rap",
+  660,
+  7,
+  "https://www.youtube.com/embed/RqKfcfit0t4",
+  2020
+);
+const enemy = new Song(
+  10,
+  "Enemy",
+  "R&B",
+  490,
+  8,
+  "https://www.youtube.com/embed/kFdhPWKAu58",
+  2015
+);
 
 /***** Songs *****/
 
+/***** Artists *****/
 
-
+const arianaGrande = new Artist(
+  4,
+  "Ariana Grande",
+  "Pop",
+  500,
+  5,
+  "../assets/arianaLogoR.png"
+);
+const badBunny = new Artist(
+  2,
+  "Bad Bunny",
+  "Reggaeton",
+  18500,
+  2,
+  "../assets/bbLogo.png"
+);
+const drake = new Artist(
+  3,
+  "Drake", 
+  "Rap", 
+  18000, 
+  3,  
+  "../assets/drakeLogo.png"
+);
+const justinBieber = new Artist(
+  1,
+  "Justin Bieber",
+  "Pop",
+  20000,
+  1,
+  "../assets/jbLogo.png"
+);
+const taylorSwift = new Artist(
+  5,
+  "Taylor Swift",
+  "Pop",
+  19000,
+  4,
+  "../assets/taylorLogo.png"
+);
+const billieEilish = new Artist(
+  6,
+  "Billie Eilish",
+  "Pop",
+  16000,
+  8,
+  "../assets/billieLogo.png"
+);
+const edSheeran = new Artist(
+  7,
+  "Ed Sheeran",
+  "Pop",
+  12000,
+  6,
+  "../assets/edLogo.png"
+)
+const postMalone = new Artist(
+  8,
+  "Post Malone",
+  "Rap",
+  13000,
+  11,
+  "../assets/postLogo.png"
+)
+const theWeeknd = new Artist(
+  9,
+  "The Weeknd",
+  "R&B",
+  19500,
+  2,
+  "../assets/twLogo.webp"
+)
 
 
 /***** Artists *****/
-
-const arianaGrande = new Artist("Ariana Grande", "Pop", 500, 4);
-const drake = new Artist("Drake", "Rap", 18000, 2);
-const justinBieber = new Artist("Justin Bieber", "Pop", 20000, 1);
-const taylorSwift = new Artist("Taylor Swift", "Pop", 19000, 3);
-
-/***** Artists *****/
-
-
-
-
 
 /***** Genres *****/
 
@@ -120,79 +240,20 @@ const taylorSwift = new Artist("Taylor Swift", "Pop", 19000, 3);
 
 /******************** OBJECTS ********************/
 
-
-
-
-
-
-
-
-
-
 /******************** ASSIGNATIONS ********************/
-
-/***** Songs *****/
 
 pinkChampagne.addArtist(arianaGrande);
 goOutTonight.addArtist(drake);
 howToLove.addArtist(justinBieber);
 raiseTheBar.addArtist(justinBieber);
 permanentMarker.addArtist(taylorSwift);
-
-/***** Songs *****/
-
-
-
-
-
-/***** Artist *****/
-
-arianaGrande.addSongs(pinkChampagne);
-drake.addSongs(goOutTonight);
-justinBieber.addSongs(howToLove);
-justinBieber.addSongs(raiseTheBar);
-taylorSwift.addSongs(permanentMarker);
-
-/***** Artist *****/
-
-//codigo a corregir
-// const artistsToSongs = {   //assignates artists to songs
-//   arianaGrande: [pinkChampagne], 
-//   drake: [goOutTonight], 
-//   justinBieber: [howToLove, raiseTheBar], 
-//   taylorSwift: [permanentMarker]
-
-// };
-
-// for (const artist in artistsToSongs) {
-//   artistsToSongs[artist].forEach(song => song.addArtist(artist));
-// }
-
-
-
-// const songsToArtists = {   //assignates songs to artists
-//   pinkChampagne: [arianaGrande], 
-//   goOutTonight: [drake], 
-//   howToLove: [justinBieber],
-//   raiseTheBar: [justinBieber],
-//   permanentMarker: [taylorSwift] 
-  
-// };
-
-// for (const song in songsToArtists){
-//   songsToArtists[song].forEach(artist => artist.addSongs(song))
-// }
+mamiNoSe.addArtist(badBunny);
+badCover.addArtist(billieEilish);
+everythingYouAre.addArtist(edSheeran);
+easier.addArtist(postMalone);
+enemy.addArtist(theWeeknd);
 
 /********************ASSIGNATIONS********************/
-
-
-
-
-
-
-
-
-
 
 /********************FUNCTIONS********************/
 
@@ -211,8 +272,6 @@ function checkAge() {
   }
 }
 
-
-
 function findArtist() {
   let artista = prompt("Search artist").toLowerCase();
   let foundArtist = false;
@@ -223,11 +282,11 @@ function findArtist() {
       artista = artist;
     }
   }
-  console.log(artista)
+  console.log(artista);
 
   if (foundArtist) {
     let songNames = [];
-    artista.songs.forEach(song => songNames.push(song.name));
+    artista.songs.forEach((song) => songNames.push(song.name));
     alert(`
     Artist: ${artista.name}
     Songs: ${songNames.join(`, `)}
@@ -238,8 +297,6 @@ function findArtist() {
     alert("No encontramos al artista");
   }
 }
-
-
 
 function request() {
   let artists = prompt(
@@ -255,64 +312,159 @@ function request() {
   alert(`We will make sure to add these ${numbArt} new artists in the future.`);
 }
 
+function alphabetical(array) {
+  array.sort((a, b) => {
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+    return nameA.localeCompare(nameB);
+  });
+}
 /********************FUNCTIONS********************/
 
+/******************** HTML ********************/
+const header = document.getElementById("header");
+header.innerHTML = `
+<nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="../assets/logo.icoResized.png"
+              alt="Unsic Logo"
+              width="30px"
+              height="35px"
+            />
+            Unsic</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              class="navbar-toggler-icon svg"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link px-3" href="../index.html">Home</a>
+              <a class="nav-link px-3" href="./artists.html">Artists</a>
+              <a class="nav-link px-3" href="./genres.html">Genres</a>
+              <a class="nav-link px-3" href="./songs.html">Songs</a>
+              <a class="nav-link px-3" href="./login.html">Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+`;
 
 
 
+const footer = document.querySelector("footer");
+footer.innerHTML = `
+<div class="row">
+  <p class="col-lg-6">
+    © Unsic 2023. All rights reserved. The content of this website, including
+    but not limited to text, images, logos, and music, is protected by copyright
+    and other intellectual property laws. Reproduction, distribution,
+    modification, or any other form of use without the prior written permission
+    of the website owners is strictly prohibited. All music material featured on
+    this website is the property of the respective artists and is used with
+    their consent. Any unauthorized use of this content may be subject to legal
+    action.
+  </p>
+  <div class="col-lg-6">
+    <p class="d-flex justify-content-center">Contact us:</p>
+    <ul class="d-flex justify-content-evenly">
+      <!--Los href no redireccionan a ningun lugar en especifico-->
+      <li>
+        <a href="lnk" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </li>
+      <li>
+        <a href="ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="mail" target="_blank"
+          ><i class="fa-regular fa-envelope"></i
+        ></a>
+      </li>
+      <li>
+        <a href="wpp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
 
 
 
+function listaArtistas() {
+  currentTab = document.location.href;
+  if (currentTab.includes("artists.html")) {
+    const artistList = document.getElementById("artistList");
+    alphabetical(arrayArtists);
+    arrayArtists.forEach((artist) => {
+      artistList.innerHTML += `<li class="col d-flex flex-column align-items-center mb-5">
+  <a id="artista" href="songs.html"
+    ><img src="${artist.icon}" alt="${artist.name}" width="150" height="150" />
+    <p class="d-flex justify-content-center">${artist.name}</p></a
+  >
+</li>
+`;
+      
+    });
+  }
+}
+listaArtistas();
 
 
 
-/******************** HEADER&FOOTER ********************/
-const footer = document.querySelector('footer')
-// footer.innerHTML = `
-// <div class="row pt-4">
-//   <p class="col-lg-6">
-//     © Unsic 2023. All rights reserved. The content of this website,
-//     including but not limited to text, images, logos, and music, is
-//     protected by copyright and other intellectual property laws.
-//     Reproduction, distribution, modification, or any other form of use
-//     without the prior written permission of the website owners is strictly
-//     prohibited. All music material featured on this website is the
-//     property of the respective artists and is used with their consent. Any
-//     unauthorized use of this content may be subject to legal action.
-//   </p>
-// <div class="col-lg-6">
-//   <p class="d-flex justify-content-center">Contact us:</p>
-//   <ul class="d-flex justify-content-evenly">
-//     <!--Los href no redireccionan a ningun lugar en especifico-->
-//     <li>
-//       <a href="lnk" target="_blank"
-//         ><i class="fa-brands fa-linkedin"></i
-//       ></a>
-//     </li>
-//     <li>
-//       <a href="ig" target="_blank"
-//         ><i class="fa-brands fa-instagram"></i
-//       ></a>
-//     </li>
-//     <li>
-//       <a href="mail" target="_blank"
-//         ><i class="fa-regular fa-envelope"></i
-//       ></a>
-//     </li>
-//     <li>
-//       <a href="wpp" target="_blank"
-//         ><i class="fa-brands fa-whatsapp"></i
-//       ></a>
-//     </li>
-//   </ul>
-// </div>
-// </div>
-// `
+function listaCanciones() {
+  cuurentTab = document.location.href;
+  if(currentTab.includes("songs.html")) {
+    const songList = document.getElementById("songList");
+alphabetical(arraySongs);
+arraySongs.forEach((song) => {
+  songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+  <iframe
+    class="col-lg-4 col-12"
+    width="560"
+    height="315"
+    src=${song.url}
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <p class="col-lg-4 col-12 d-flex align-items-center">
+    ${song.name} - ${song.artists[0].name} - ${song.date}
+  </p>
+</li>`;
+});
+  }
+}
+listaCanciones();
 
 
 
-
-
-checkAge();
-findArtist();
-request();
+// checkAge();
+// findArtist();
+// request();
