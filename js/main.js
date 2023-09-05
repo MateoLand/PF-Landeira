@@ -452,6 +452,7 @@ function listaArtistas() {
 
       const artistLink = document.createElement("a");
       artistLink.id = artist.id;
+      artistLink.href = "songs.html"
 
       artistLink.innerHTML = `
         <img src="${artist.icon}" alt="${artist.name}" width="150" height="150" />
