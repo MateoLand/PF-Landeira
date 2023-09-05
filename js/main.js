@@ -416,20 +416,55 @@ footer.innerHTML = `
 
 
 
+// function listaArtistas() {
+//   currentTab = document.location.href;
+//   if (currentTab.includes("artists.html")) {
+//     const artistList = document.getElementById("artistList");
+//     alphabetical(arrayArtists);
+//     arrayArtists.forEach((artist) => {
+//       artistList.innerHTML += `<li class="col d-flex flex-column align-items-center mb-5">
+//   <a id="${artist.id}" 
+//     ><img src="${artist.icon}" alt="${artist.name}" width="150" height="150" />
+//     <p class="d-flex justify-content-center">${artist.name}</p></a
+//   >
+// </li>
+// `;
+//       const artista = document.getElementById(`${artist.id}`)
+//       artista.addEventListener("click", () => {
+//         localStorage.setItem("artistId", artist.id);
+//         console.log(localStorage);
+//       })
+//     });
+//   }
+// }
+// listaArtistas();
+
+
+
 function listaArtistas() {
   currentTab = document.location.href;
   if (currentTab.includes("artists.html")) {
     const artistList = document.getElementById("artistList");
     alphabetical(arrayArtists);
     arrayArtists.forEach((artist) => {
-      artistList.innerHTML += `<li class="col d-flex flex-column align-items-center mb-5">
-  <a id="artista" href="songs.html"
-    ><img src="${artist.icon}" alt="${artist.name}" width="150" height="150" />
-    <p class="d-flex justify-content-center">${artist.name}</p></a
-  >
-</li>
-`;
-      
+      const listItem = document.createElement("li");
+      listItem.classList.add("col", "d-flex", "flex-column", "align-items-center", "mb-5");
+
+      const artistLink = document.createElement("a");
+      artistLink.id = artist.id;
+
+      artistLink.innerHTML = `
+        <img src="${artist.icon}" alt="${artist.name}" width="150" height="150" />
+        <p class="d-flex justify-content-center">${artist.name}</p>
+      `;
+
+      artistLink.addEventListener("click", () => {
+        localStorage.setItem("artistId", artist.id);
+        console.log(localStorage);
+      });
+
+      listItem.appendChild(artistLink);
+      artistList.appendChild(listItem);
     });
   }
 }
@@ -437,13 +472,73 @@ listaArtistas();
 
 
 
+
+
+// function listaCanciones() {
+//   currentTab = document.location.href;
+//   if(currentTab.includes("songs.html")) {
+//     const songList = document.getElementById("songList");
+//     alphabetical(arraySongs);
+//     const artistId = localStorage.getItem("artistId");
+//     if(artistId){
+//       const songsByArtist = arraySongs.filter(song => song.artistId === parseInt(artistId))
+//       songsByArtist.forEach((song) => {
+//         songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+//   <iframe
+//     class="col-lg-4 col-12"
+//     width="560"
+//     height="315"
+//     src=${song.url}
+//     title="YouTube video player"
+//     frameborder="0"
+//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//     allowfullscreen
+//   ></iframe>
+//   <p class="col-lg-4 col-12 d-flex align-items-center">
+//     ${song.name} - ${song.artists[0].name} - ${song.date}
+//   </p>
+// </li>`;
+
+//       })
+//     } else{
+//       arraySongs.forEach((song) => {
+//         songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+//   <iframe
+//     class="col-lg-4 col-12"
+//     width="560"
+//     height="315"
+//     src=${song.url}
+//     title="YouTube video player"
+//     frameborder="0"
+//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//     allowfullscreen
+//   ></iframe>
+//   <p class="col-lg-4 col-12 d-flex align-items-center">
+//     ${song.name} - ${song.artists[0].name} - ${song.date}
+//   </p>
+// </li>`;
+//       });
+//     }
+
+//   }
+// }
+// listaCanciones();
+
+
+
+
+
+
+
+
 function listaCanciones() {
-  cuurentTab = document.location.href;
+  currentTab = document.location.href;
   if(currentTab.includes("songs.html")) {
     const songList = document.getElementById("songList");
-alphabetical(arraySongs);
-arraySongs.forEach((song) => {
-  songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+    alphabetical(arraySongs);
+    const artistId = localStorage.getItem("artistId");
+    arraySongs.forEach((song) => {
+      songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
   <iframe
     class="col-lg-4 col-12"
     width="560"
@@ -458,8 +553,9 @@ arraySongs.forEach((song) => {
     ${song.name} - ${song.artists[0].name} - ${song.date}
   </p>
 </li>`;
-});
-  }
+      });
+    }
+
 }
 listaCanciones();
 
