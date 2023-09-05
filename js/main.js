@@ -474,71 +474,36 @@ listaArtistas();
 
 
 
-// function listaCanciones() {
-//   currentTab = document.location.href;
-//   if(currentTab.includes("songs.html")) {
-//     const songList = document.getElementById("songList");
-//     alphabetical(arraySongs);
-//     const artistId = localStorage.getItem("artistId");
-//     if(artistId){
-//       const songsByArtist = arraySongs.filter(song => song.artistId === parseInt(artistId))
-//       songsByArtist.forEach((song) => {
-//         songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
-//   <iframe
-//     class="col-lg-4 col-12"
-//     width="560"
-//     height="315"
-//     src=${song.url}
-//     title="YouTube video player"
-//     frameborder="0"
-//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-//     allowfullscreen
-//   ></iframe>
-//   <p class="col-lg-4 col-12 d-flex align-items-center">
-//     ${song.name} - ${song.artists[0].name} - ${song.date}
-//   </p>
-// </li>`;
-
-//       })
-//     } else{
-//       arraySongs.forEach((song) => {
-//         songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
-//   <iframe
-//     class="col-lg-4 col-12"
-//     width="560"
-//     height="315"
-//     src=${song.url}
-//     title="YouTube video player"
-//     frameborder="0"
-//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-//     allowfullscreen
-//   ></iframe>
-//   <p class="col-lg-4 col-12 d-flex align-items-center">
-//     ${song.name} - ${song.artists[0].name} - ${song.date}
-//   </p>
-// </li>`;
-//       });
-//     }
-
-//   }
-// }
-// listaCanciones();
-
-
-
-
-
-
-
-
 function listaCanciones() {
   currentTab = document.location.href;
   if(currentTab.includes("songs.html")) {
     const songList = document.getElementById("songList");
     alphabetical(arraySongs);
     const artistId = localStorage.getItem("artistId");
-    arraySongs.forEach((song) => {
-      songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+    if(artistId){
+      const songsByArtist = arraySongs.filter(song => song.artists[0].id === parseInt(artistId))
+      songsByArtist.forEach((song) => {
+        songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+  <iframe
+    class="col-lg-4 col-12"
+    width="560"
+    height="315"
+    src=${song.url}
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <p class="col-lg-4 col-12 d-flex align-items-center">
+    ${song.name} - ${song.artists[0].name} - ${song.date}
+  </p>
+</li>`;
+
+      })
+      localStorage.clear()
+    } else{
+      arraySongs.forEach((song) => {
+        songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
   <iframe
     class="col-lg-4 col-12"
     width="560"
@@ -556,8 +521,44 @@ function listaCanciones() {
       });
     }
 
+  }
 }
 listaCanciones();
+
+
+
+
+
+
+
+
+// function listaCanciones() {
+//   currentTab = document.location.href;
+//   if(currentTab.includes("songs.html")) {
+//     const songList = document.getElementById("songList");
+//     alphabetical(arraySongs);
+//     const artistId = localStorage.getItem("artistId");
+//     arraySongs.forEach((song) => {
+//       songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
+//   <iframe
+//     class="col-lg-4 col-12"
+//     width="560"
+//     height="315"
+//     src=${song.url}
+//     title="YouTube video player"
+//     frameborder="0"
+//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//     allowfullscreen
+//   ></iframe>
+//   <p class="col-lg-4 col-12 d-flex align-items-center">
+//     ${song.name} - ${song.artists[0].name} - ${song.date}
+//   </p>
+// </li>`;
+//       });
+//     }
+
+// }
+// listaCanciones();
 
 
 
