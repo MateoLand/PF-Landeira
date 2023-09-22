@@ -369,7 +369,7 @@ header.innerHTML = `
               <a class="nav-link px-3" href="./artists.html">Artists</a>
               <a class="nav-link px-3" href="./genres.html">Genres</a>
               <a class="nav-link px-3" href="./songs.html">Songs</a>
-              <a class="nav-link px-3" href="./login.html">Login</a>
+              <a id="usernameNav" class="nav-link px-3" href="./login.html">Login</a>
             </div>
           </div>
         </div>
@@ -413,31 +413,6 @@ footer.innerHTML = `
   </div>
 </div>
 `;
-
-
-
-// function listaArtistas() {
-//   currentTab = document.location.href;
-//   if (currentTab.includes("artists.html")) {
-//     const artistList = document.getElementById("artistList");
-//     alphabetical(arrayArtists);
-//     arrayArtists.forEach((artist) => {
-//       artistList.innerHTML += `<li class="col d-flex flex-column align-items-center mb-5">
-//   <a id="${artist.id}" 
-//     ><img src="${artist.icon}" alt="${artist.name}" width="150" height="150" />
-//     <p class="d-flex justify-content-center">${artist.name}</p></a
-//   >
-// </li>
-// `;
-//       const artista = document.getElementById(`${artist.id}`)
-//       artista.addEventListener("click", () => {
-//         localStorage.setItem("artistId", artist.id);
-//         console.log(localStorage);
-//       })
-//     });
-//   }
-// }
-// listaArtistas();
 
 
 
@@ -530,39 +505,44 @@ listaCanciones();
 
 
 
+function login() {
+  currentTab = document.location.href;
+  if (currentTab.includes("login.html")) {
+    const login = document.getElementById("login");
+    login.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      Swal.fire({
+        title: `Welcome, ${username}.`,
+        text: `Enjoy the music! Enjoy the art!`,
+        icon: "success",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Almacena el nombre de usuario en sessionStorage
+          sessionStorage.setItem("username", username);
+
+          // Redirige al usuario a "index.html"
+          window.location.href = "../index.html";
+        }
+      });
+    });
+  }
+}
+login();
 
 
 
-// function listaCanciones() {
-//   currentTab = document.location.href;
-//   if(currentTab.includes("songs.html")) {
-//     const songList = document.getElementById("songList");
-//     alphabetical(arraySongs);
-//     const artistId = localStorage.getItem("artistId");
-//     arraySongs.forEach((song) => {
-//       songList.innerHTML += `<li class="row d-flex justify-content-evenly py-4">
-//   <iframe
-//     class="col-lg-4 col-12"
-//     width="560"
-//     height="315"
-//     src=${song.url}
-//     title="YouTube video player"
-//     frameborder="0"
-//     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-//     allowfullscreen
-//   ></iframe>
-//   <p class="col-lg-4 col-12 d-flex align-items-center">
-//     ${song.name} - ${song.artists[0].name} - ${song.date}
-//   </p>
-// </li>`;
-//       });
-//     }
-
-// }
-// listaCanciones();
 
 
 
-// checkAge();
-// findArtist();
-// request();
+function checkLogin() {
+  const storedUsername = sessionStorage.getItem("username");
+  const usernameNav = document.getElementById("usernameNav");
+  if (storedUsername) {
+    usernameNav.innerHTML = `${storedUsername}`;
+    usernameNav.addEventListener("click", function () {
+      sessionStorage.removeItem("username");
+    });
+  }
+}
+checkLogin()
