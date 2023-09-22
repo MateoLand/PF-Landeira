@@ -1,0 +1,55 @@
+{
+  "artists": [
+    {
+      "id": 1,
+      "name": "Justin Bieber",
+      "songsId": [1, 2],
+      "genre": "Pop",
+      "listeners": 20000,
+      "position": 1,
+      "image": "../assets/jbLogo.png"
+    },
+    {
+      "id": 2,
+      "name": "Bad Bunny",
+      "songsId": [3],
+      "genre": "Reggaeton",
+      "listeners": 18500,
+      "position": 3,
+      "image": "../assets/bbLogo.png"
+    }
+  ],
+
+  "songs":[
+    {
+        "id": 1,
+        "title": "Raise the Bar",
+        "artistId": [1],
+        "genre": "Pop",
+        "streams": 1000,
+        "position": 1,
+        "url": "https://www.youtube.com/embed/XqvEdUfmXXU",
+        "year": 2016
+    },
+    {
+        "id": 2,
+        "title": "How to Love",
+        "artistId": [1],
+        "genre": "Pop",
+        "streams": 980,
+        "position": 2,
+        "url": "https://www.youtube.com/embed/PQocCi6j_mk",
+        "year": 2011
+    },
+    {
+        "id": 3,
+        "title": "Mami No Se",
+        "artistId": [2],
+        "genre": "Reggaeton",
+        "streams": 900,
+        "position": 6,
+        "url": "https://www.youtube.com/embed/5-rr3sEfySM",
+        "year": 2018
+    }
+  ]
+}
