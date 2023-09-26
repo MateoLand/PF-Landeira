@@ -1,0 +1,188 @@
+{
+  "artists": [
+    {
+      "id": 1,
+      "name": "Justin Bieber",
+      "songsId": [1, 2],
+      "genre": "Pop",
+      "listeners": 20000,
+      "position": 1,
+      "image": "../assets/jbLogo.png"
+    },
+    {
+      "id": 2,
+      "name": "Bad Bunny",
+      "songsId": [3],
+      "genre": "Reggaeton",
+      "listeners": 18500,
+      "position": 3,
+      "image": "../assets/bbLogo.png"
+    }, 
+    {
+      "id": 3,
+      "name": "Drake",
+      "songsId": [4],
+      "genre": "Rap",
+      "listeners": 18000,
+      "position": 2,
+      "image": "../assets/drakeLogo.png"
+    }, 
+    {
+      "id": 4,
+      "name": "Ariana Grande",
+      "songsId": [6],
+      "genre": "Pop",
+      "listeners": 500,
+      "position": 5,
+      "image": "../assets/arianaLogoR.png"
+    }, 
+    {
+      "id": 5,
+      "name": "Taylor Swift",
+      "songsId": [5],
+      "genre": "Pop",
+      "listeners": 19000,
+      "position": 4,
+      "image": "../assets/taylorLogo.png"
+    },
+    {
+      "id": 6,
+      "name": "Billie Eilish",
+      "songsId": [7],
+      "genre": "Pop",
+      "listeners": 16000,
+      "position": 8,
+      "image": "../assets/billieLogo.png"
+    }, 
+    {
+      "id": 7,
+      "name": "Ed Sheeran",
+      "songsId": [8],
+      "genre": "Pop",
+      "listeners": 12000,
+      "position": 6,
+      "image": "../assets/edLogo.png"
+    }, 
+    {
+      "id": 8,
+      "name": "Post Malone",
+      "songsId": [9],
+      "genre": "Rap",
+      "listeners": 13000,
+      "position": 11,
+      "image": "../assets/postLogo.png"
+    },
+    {
+      "id": 9,
+      "name": "The Weeknd",
+      "songsId": [10],
+      "genre": "R&B",
+      "listeners": 19500,
+      "position": 2,
+      "image": "../assets/twLogo.webp"
+    }
+  ],
+
+  "songs":[
+    {
+        "id": 1,
+        "name": "Raise the Bar",
+        "artistId": [1],
+        "genre": "Pop",
+        "streams": 1000,
+        "position": 1,
+        "url": "https://www.youtube.com/embed/XqvEdUfmXXU",
+        "year": 2016
+    },
+    {
+        "id": 2,
+        "name": "How to Love",
+        "artistId": [1],
+        "genre": "Pop",
+        "streams": 980,
+        "position": 2,
+        "url": "https://www.youtube.com/embed/PQocCi6j_mk",
+        "year": 2011
+    },
+    {
+        "id": 3,
+        "name": "Mami No Se",
+        "artistId": [2],
+        "genre": "Reggaeton",
+        "streams": 900,
+        "position": 6,
+        "url": "https://www.youtube.com/embed/5-rr3sEfySM",
+        "year": 2018
+    }, 
+    {
+      "id": 4,
+      "name": "Go Out Tonight",
+      "artistId": [3],
+      "genre": "Rap",
+      "streams": 450,
+      "position": 4,
+      "url": "https://www.youtube.com/embed/nRdUGMm68zY",
+      "year": 2015
+    }, 
+    {
+      "id": 5,
+      "name": "Permanent Marker",
+      "artistId": [5],
+      "genre": "Pop",
+      "streams": 700,
+      "position": 3,
+      "url": "https://www.youtube.com/embed/iBLJR3VDbnY",
+      "year": 2009
+    }, 
+    {
+      "id": 6,
+      "name": "Pink Champagne",
+      "artistId": [4],
+      "genre": "Pop",
+      "streams": 300,
+      "position": 5,
+      "url": "https://www.youtube.com/embed/kbp3Rlscn50",
+      "year": 2013
+    },     
+    {
+      "id": 7,
+      "name": "Bad (cover)",
+      "artistId": [6],
+      "genre": "Pop",
+      "streams": 300,
+      "position": 8,
+      "url": "https://www.youtube.com/embed/dL9TK-OnH-g",
+      "year": 2018
+    }, 
+    {
+      "id": 8,
+      "name": "Everything You Are",
+      "artistId": [7],
+      "genre": "Pop",
+      "streams": 800,
+      "position": 10,
+      "url": "https://www.youtube.com/embed/o_ez1-zIUR8",
+      "year": 2014
+    }, 
+    {
+      "id": 9,
+      "name": "Easier",
+      "artistId": [8],
+      "genre": "Rap",
+      "streams": 660,
+      "position": 7,
+      "url": "https://www.youtube.com/embed/RqKfcfit0t4",
+      "year": 2020
+    }, 
+    {
+      "id": 10,
+      "name": "Enemy",
+      "artistId": [9],
+      "genre": "R&B",
+      "streams": 490,
+      "position": 8,
+      "url": "https://www.youtube.com/embed/kFdhPWKAu58",
+      "year": 2015
+    }                    
+  ]
+}
