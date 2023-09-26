@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: -moz-scrollbars-none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Webkit browsers (Chrome, Safari, etc.) */
+}
+
+body {
+  background-color: rgba(7, 6, 6);
+}
+
+.index_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  background: rgba(1, 1, 1, 1);
+  background: linear-gradient(270deg, rgba(1, 1, 1, 1), rgba(3, 10, 15, 1));
+
+  #unsicSlogan {
+    font-family: $font-primary;
+    font-size: calc(4vw + 3rem);
+    color: rgb(0, 192, 254);
+    // text-shadow: -10px -10px 0px rgb(0, 0, 0);
+    -webkit-text-stroke: 5px rgb(0, 0, 0);
+    letter-spacing: 0.5rem;
+  }
+
+  span {
+    display: block;
+  }
+
+  p {
+    font-size: 23px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul a:hover p {
+    color: rgb(0, 192, 254);
+  }
+
+  li p:hover {
+    color: rgb(0, 192, 254);
+    cursor: pointer;
+  }
+
+  form {
+    label {
+      color: antiquewhite;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}
+
+// .genre {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 16px;
+//   font-weight: 400;
+//   text-align: center;
+//   position: relative;
+//   width: 50%;
+
+//   &:hover .description {
+//     opacity: 1;
+//   }
+
+//   & img {
+//     width: 90%;
+//     height: 100%;
+//     border-radius: 11px;
+//   }
+
+//   & .description {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     top: 0;
+//     width: 90%;
+//     height: 100%;
+//     background-color: rgba(255, 255, 255, 0.655);
+//     opacity: 0;
+//     transition: opacity 0.3s ease-in-out;
+//     text-align: center;
+//     cursor: default;
+//     user-select: none;
+//     border-radius: 11px;
+
+//     & h2 {
+//       color: black;
+//       font-size: 16px;
+//       font-weight: 900;
+//     }
+//   }
+// }
